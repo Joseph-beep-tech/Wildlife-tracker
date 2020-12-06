@@ -23,5 +23,23 @@ public class Endangered extends Wildlife{
 
     }
 
+    public String getHealth() {
+        return health;
+    }
 
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public static String getDatabaseType() {
+        return DATABASE_TYPE;
+    }
 }
