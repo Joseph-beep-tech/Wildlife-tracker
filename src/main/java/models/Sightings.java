@@ -1,6 +1,5 @@
 package models;
 
-
 import java.security.Timestamp;
 
 public class Sightings{
@@ -16,5 +15,45 @@ public class Sightings{
         this.location = location;
         this.rangerName = rangerName;
         this.wildlifeId = wildlifeId;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getRangerName() {
+        return rangerName;
+    }
+
+    public void setRangerName(String rangerName) {
+        this.rangerName = rangerName;
+    }
+
+    public int getWildlifeId() {
+        return wildlifeId;
+    }
+
+    public void setWildlifeId(int wildlifeId) {
+        this.wildlifeId = wildlifeId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Timestamp getTime() {
+        return time;
+    }
+
+    public void setTime(Timestamp time) {
+        this.time = time;
     }
 }
