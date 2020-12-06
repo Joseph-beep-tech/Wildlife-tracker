@@ -3,7 +3,7 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
             <tr>
-                <th scope="col">Animal's Name</th>
+                <th scope="col">Animals Name</th>
                 <th scope="col">Type</th>
                 <th scope="col">Animal's</th>
                 <th scope="col">Health Condition</th>
@@ -12,7 +12,7 @@
             <tbody class="font-weight-weight">
             {{#if animals}}
                 {{#each animals}}
-                    <tr class="bg-dark text-white">
+                    <tr class="bg-cyan text-white">
                         <td>{{ animalName }}</td>
                         <td>{{ type }}</td>
                         <td>{{ age }}</td>
@@ -22,7 +22,7 @@
             {{/if}}
             {{#if common}}
                 {{#each common}}
-                    <tr class="bg-secondary">
+                    <tr class="bg-info">
                         <td>{{ animalName }}</td>
                         <td colspan="3">{{ type }}</td>
                     </tr>
