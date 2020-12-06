@@ -1,7 +1,5 @@
 package models;
 
-import java.util.Objects;
-
 public abstract class Wildlife{
 
     public static int id;
