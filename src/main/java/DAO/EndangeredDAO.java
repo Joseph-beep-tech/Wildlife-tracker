@@ -8,7 +8,7 @@ import org.sql2o.Sql2oException;
 
 import java.util.List;
 
-public class EndangeredDAO implements Sql2oEndangered{
+public class EndangeredDAO<Sql2oEndangered> implements sql2oEndangered{
     private final Sql2o sql2o;
     public static final String DATABASE_TYPE = "endangered";
     private String type;
