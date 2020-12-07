@@ -19,8 +19,8 @@ public class App {
         System.out.println("TESTING PASSED");
 
         staticFileLocation("/public");
-        String connectionString = "jdbc:postgresql://localhost:5432/wildlife";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Brook1234");
+        String connectionString = "jdbc:postgresql://localhost:5432/wildlife_tracker";
+        Sql2o sql2o = new Sql2o(connectionString, "moring", "Brook1234");
         sql2oAnimalDAO sql2oAnimalDAO = new sql2oAnimalDAO (sql2o);
         SightingsDAO sightingsDAO = new SightingsDAO(sql2o);
         EndangeredDAO endangeredDAO = new EndangeredDAO(sql2o);
@@ -30,7 +30,7 @@ public class App {
         Map<String, Object> model = new HashMap<>();
 
         String young = null;
-        Wildlife animal = new Endangered ("hippo", "endangered","ill","young", young );
+        Wildlife animal = new Endangered ("hippo", "endangered","ill","young", young);
         System.out.println(animal.getAnimalName());
 
 
