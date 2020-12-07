@@ -20,7 +20,7 @@ public class App {
 
         staticFileLocation("/public");
         String connectionString = "jdbc:postgresql://localhost:5432/wildlife";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Brook1234");
         sql2oAnimalDAO sql2oAnimalDAO = new sql2oAnimalDAO (sql2o);
         SightingsDAO sightingsDAO = new SightingsDAO(sql2o);
         EndangeredDAO endangeredDAO = new EndangeredDAO(sql2o);
@@ -65,11 +65,11 @@ public class App {
             return null;
         }, new HandlebarsTemplateEngine());
 
-        get("/animals", (request, response) -> {
+        get("/all-animals", (request, response) -> {
             model.put("animals", endangeredDAO.getAllEndangeredAnimals());
             model.put("common",sql2oAnimalDAO.getAllAnimals());
 
-            return new ModelAndView(model, "animals.hbs");
+            return new ModelAndView(model, "allAnimals.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/sightings", (request, response) -> {
