@@ -11,7 +11,7 @@ import java.util.List;
 public class EndangeredDAO<Sql2oEndangered> implements sql2oEndangered{
     private final Sql2o sql2o;
     public static final String DATABASE_TYPE = "endangered";
-    private String type;
+    private final String type;
 
     public EndangeredDAO(Sql2o sql2o) {
         this.sql2o = sql2o;

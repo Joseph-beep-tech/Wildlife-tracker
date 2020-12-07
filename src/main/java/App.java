@@ -29,7 +29,8 @@ public class App {
 
         Map<String, Object> model = new HashMap<>();
 
-        Wildlife animal = new Endangered ("hippo", "endangered","ill","young");
+        String young = null;
+        Wildlife animal = new Endangered ("hippo", "endangered","ill","young", young );
         System.out.println(animal.getAnimalName());
 
 

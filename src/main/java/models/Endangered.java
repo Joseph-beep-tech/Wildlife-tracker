@@ -14,13 +14,17 @@ public class Endangered extends Wildlife{
 
     private static final String DATABASE_TYPE = "endangered";
 
-    public Endangered(String animalName, String type, String health, String age){
+    public Endangered(String animalName, String type, String health, String age, String young){
 
-        super(animalName, type);
+        super(animalName, type, young );
         this.age = age;
         this.health = health;
         this.setType (DATABASE_TYPE);
 
+    }
+
+    public Endangered(String hippo, String ill, String young) {
+        super ( hippo, ill, young );
     }
 
     public String getHealth() {
