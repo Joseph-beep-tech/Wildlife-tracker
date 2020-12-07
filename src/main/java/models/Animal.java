@@ -1,5 +1,9 @@
 package models;
 
+import java.util.List;
+
+import org.sql2o.Connection;
+import org.sql2o.Sql2oException;
 
 public class Animal extends Wildlife{
     private int id;
