@@ -22,4 +22,7 @@ dependencies {
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     compile "com.sparkjava:spark-core:2.6.0"
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
 }
+apply plugin: 'java'
+applicationName = 'josewildtracker'
