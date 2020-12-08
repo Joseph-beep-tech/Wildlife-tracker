@@ -1,0 +1,35 @@
+{{#partial "content"}}
+    <section class="container">
+        <table class="table table-bordered">
+            <thead class="thead-green">
+            <tr>
+                <th scope="col">Animals Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Animal's Age</th>
+                <th scope="col">Health Condition</th>
+            </tr>
+            </thead>
+            <tbody class="font-weight-weight">
+            {{#if animals}}
+                {{#each animals}}
+                    <tr class="bg-info text-white">
+                        <td>{{ animalName }}</td>
+                        <td>{{ type }}</td>
+                        <td>{{ age }}</td>
+                        <td>{{ health }}</td>
+                    </tr>
+                {{/each}}
+            {{/if}}
+            {{#if common}}
+                {{#each common}}
+                    <tr class="bg-info text-white">
+                        <td>{{ animalName }}</td>
+                        <td colspan="3">{{ type }}</td>
+                    </tr>
+                {{/each}}
+            {{/if}}
+            </tbody>
+        </table>
+    </section>
+{{/partial}}
+{{>layout.hbs}}

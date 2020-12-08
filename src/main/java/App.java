@@ -18,9 +18,15 @@ public class App {
     public static void main(String[] args) {
         System.out.println("TESTING PASSED");
 
+//        postgres://omddmziosdszkb:9b7722304114bad25caa1d6d42412d92e63690aa03d688a5c4f39dc1461afb82@ec2-54-237-135-248.compute-1.amazonaws.com:5432/dql38s6fab9c0
+
         staticFileLocation("/public");
-        String connectionString = "jdbc:postgresql://localhost:5432/wildlife_tracker";
-        Sql2o sql2o = new Sql2o(connectionString, "moring", "Brook1234");
+//       String connectionString = "jdbc:postgresql://localhost:5432/wildlife_tracker";
+       String connectionString = "jdbc:postgresql://ec2-54-237-135-248.compute-1.amazonaws.com:5432/dql38s6fab9c0";
+
+//        Sql2o sql2o = new Sql2o(connectionString, "moring", "Brook1234");
+
+        Sql2o sql2o = new Sql2o(connectionString, "omddmziosdszkb", "9b7722304114bad25caa1d6d42412d92e63690aa03d688a5c4f39dc1461afb82");
         sql2oAnimalDAO sql2oAnimalDAO = new sql2oAnimalDAO (sql2o);
         SightingsDAO sightingsDAO = new SightingsDAO(sql2o);
         EndangeredDAO endangeredDAO = new EndangeredDAO(sql2o);

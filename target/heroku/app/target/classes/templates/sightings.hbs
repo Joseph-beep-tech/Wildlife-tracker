@@ -1,0 +1,31 @@
+{{#partial "content"}}
+    <section class="container">
+        {{#if sight}}
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Ranger's Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Animal's</th>
+                    <th scope="col">Time tracked</th>
+                </tr>
+                </thead>
+                {{#each sight}}
+                <tbody class="font-weight-weight">
+                <tr class="bg-secondary text-white">
+                    <td>{{rangerName}}</td>
+                    <td>{{location}}</td>
+                    <td>{{animalId}}</td>
+                    <td>{{time}}</td>
+                </tr>
+
+                {{/each}}
+            </tbody>
+            </table>
+        {{else}}
+            <h2>Please add sightings to view</h2>
+        {{/if}}
+    </section>
+
+{{/partial}}
+{{> layout.hbs}}
